@@ -22,8 +22,9 @@
   - [2-4. Programming Language](#2-4-programming-language)
   - [2-5. Data Structure and Algorithm](#2-5-data-structure-and-algorithm)
   - [2-6. common sense](#2-6-common-sense)
-- [3. Designing Data-Intensive Application](#3-designing-data-intensive-application)
-- [4. Fields of Study](#4-fields-of-study)
+- [3. GoF Design Pattern and Architecture Pattern](#3-gof-design-pattern-and-architecture-pattern)
+- [4. Designing Data-Intensive Application](#4-designing-data-intensive-application)
+- [5. Fields of Study](#5-fields-of-study)
 
 
 <br>
@@ -35,6 +36,7 @@
 ### 1-1. Hadoop Ecosystem
 - Apache Hadoop
   - [HDFS의 replication-factor를 3->5로 변경하면 최대 몇 번의 장애까지 견딜 수 있는가?](interview/hadoop/hdfs_replication_and_fault_tolerance.md)
+  - JournalNode의 장애 허용 개수
   - Hadoop 3.x의 Erasure Coding
   - [YARN이 도입된 이유](interview/hadoop/why_use_yarn.md)
   - [HA consensus of HDFS](interview/hadoop/hdfs_ha_and_consensus.md)
@@ -85,6 +87,8 @@
   - Which is faster, SORT BY or ORDER BY in HiveQL?
   - What is HCatalog?
   - Hive UDF란?
+- Apache Impala
+  - Impala with parquet에서 스키마 변경을 위한 PARQUET_FALLBACK_SCHEMA_RESOLUTION 옵션
 - Apache Kafka
   - [Kafka의 partition은 많을 수록 좋을까?](interview/hadoop/kafka_too_many_partitions.md)
   - [Kafka Streams Topology](interview/hadoop/kafka_streams_topology.md)
@@ -95,14 +99,15 @@
   - [Burrow와 Telegraf로 Kafka Lag 모니터링하기](https://blog.voidmainvoid.net/279)
   - ISR (In Sync Replica)
   - Kafka의 Controller Broker(KafkaController)란 무엇인가?
+  - [dead letter queue](https://devidea.tistory.com/111)
 - Apache Oozie
   - Oozie를 사용하면서 불편했던 점들
 - Apache Airflow
   - Executor Types: Local vs Remote ([link](https://airflow.apache.org/docs/apache-airflow/stable/executor/index.html))
   - Celery 개념과 Celery Excutor
 - CDH setup
-  - [Set up Virtual Box](bigdata_components/cloudera/setup_virtual_box.md)
-  - [Install Cloudera Manager](bigdata_components/cloudera/install_cloudera_manager.md)
+  - [~~Set up Virtual Box~~](bigdata_components/cloudera/setup_virtual_box.md)
+  - [~~Install Cloudera Manager~~](bigdata_components/cloudera/install_cloudera_manager.md)
 - Common Questions
   - [Top 50 Hadoop Interview Questions You Must Prepare In 2020](interview/top_bigdata_questions/top_50_hadoop_interview_questions_in_2020.md)
   - [Top Hadoop Interview Questions To Prepare In 2020 – HDFS](interview/top_bigdata_questions/top_hadoop_interview_questions_in_2020_hdfs.md)
@@ -199,6 +204,8 @@
   - Scala
     - [Scala의 함수형 프로그래밍 성질](interview/computer_science/scala_functional_programming.md)
     - [Scala의 pass-by-name](https://stackoverflow.com/questions/9508051/function-parameter-types-and)
+    - 동반 객체 (Companion Object)
+    - 케이스 클래스 (case class)
   - Python
     - [GIL(Global Interpreter Lock)](interview/computer_science/python_gil.md)
 
@@ -219,22 +226,27 @@
 
 ### 2-6. common sense
   - [MVC Pattern](interview/computer_science/mvc_pattern.md)
+  - 객체지향의 DTO, DAO, VO 개념 용어
   - Idempotence(멱등성)
   - 테스트 도구와 절차
   - 트래픽/트랜잭션량 측정
   - Singleton 패턴을 사용하는 이유
 
+<br>
+
+## 3. GoF Design Pattern and Architecture Pattern
+GoF란 1995년에 출간된 "Design Patterns of Reusable Object-Oriented Software"라는 책의 저자들(Erich Gamma, Richard Helm, Ralph Johnson, John Vlissdes)를 의미한다.
 
 <br>
 
-## 3. Designing Data-Intensive Application
+## 4. Designing Data-Intensive Application
 데이터 중심 애플리케이션 설계
   - OLTP와 OLAP
 
 <br>
 
 
-## 4. Fields of Study
+## 5. Fields of Study
 머신러닝, 데이터분석 등 관심있는 연구 분야와 수행 프로젝트 정리
 
 - [Anomaly Detection](fields_of_study/anomaly_detection)
